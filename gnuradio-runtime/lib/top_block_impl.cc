@@ -26,6 +26,7 @@
 
 #include "flat_flowgraph.h"
 #include "scheduler_tpb.h"
+#include "terminate_handler.h"
 #include "top_block_impl.h"
 #include <gnuradio/prefs.h>
 #include <gnuradio/top_block.h>
@@ -86,6 +87,7 @@ top_block_impl::top_block_impl(top_block* owner, bool catch_exceptions = true)
       d_retry_wait(false),
       d_catch_exceptions(catch_exceptions)
 {
+    install_terminate_handler();
 }
 
 top_block_impl::~top_block_impl()
