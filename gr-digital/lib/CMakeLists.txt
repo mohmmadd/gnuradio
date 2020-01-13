@@ -107,7 +107,7 @@ target_link_libraries(gnuradio-digital PUBLIC
     gnuradio-blocks
     gnuradio-analog
     Boost::boost
-    ${GR_VOLK_LIB}
+    Volk::volk
 )
 
 
